@@ -1,3 +1,5 @@
+package oops;
+
 public class AccessFaqs {
     private int a;
     private static int b;
@@ -15,7 +17,7 @@ public class AccessFaqs {
 
     @Override
     public String toString() {
-        return "AccessFaqs{" +
+        return "oops.AccessFaqs{" +
                 "a=" + a +
                 '}';
     }
