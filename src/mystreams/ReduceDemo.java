@@ -17,8 +17,7 @@ public class ReduceDemo {
         // Two ways to obtain the integer product of the elements
         // in myList by use of reduce().
         Optional<Integer> productObj = myList.stream().reduce((a,b) -> a*b );
-        if (productObj.isPresent())
-            System.out.println("Product as optional: "+productObj.get());
+        productObj.ifPresent(integer -> System.out.println("Product as optional: " + integer));
 
         int product = myList.stream().reduce(1,(a,b) -> a*b );
         System.out.println("Product as int: "+product);

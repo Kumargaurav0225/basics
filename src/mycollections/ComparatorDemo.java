@@ -51,6 +51,8 @@ public class ComparatorDemo {
         // // Again iterating over entries to print them
         for (int i = 0; i < ar.size(); i++)
             System.out.println(ar.get(i));
+        HashMap<Integer,String> mp = new HashMap<>();
+        mp.get(1);
     }
 }
 

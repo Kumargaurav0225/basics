@@ -23,9 +23,9 @@ public class CollectorsDemo2 {
 
         // Use collect to create a List of the names and phone numbers.
         List<NamePhone> npList = nameAndPhone.collect(
-                () -> new LinkedList<NamePhone>(),
-                (list, element) -> list.add(element),
-                (listA, listB) -> listA.addAll(listB));
+                LinkedList::new,
+                LinkedList::add,
+                LinkedList::addAll);
 
         System.out.println("Names and phone numbers in a List:");
         for (NamePhone e : npList)

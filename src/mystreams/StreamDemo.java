@@ -29,7 +29,7 @@ public class StreamDemo {
         // is a terminal operation that consumed the stream.
         myStream = myList.stream();
         Optional<Integer> maxVal = myStream.max(Integer::compare);
-        if (maxVal.isPresent()) System.out.println("Maximum value: "+maxVal.get());
+        maxVal.ifPresent(integer -> System.out.println("Maximum value: " + integer));
 
         // Sort the stream by use of sorted().
         Stream<Integer> sortedStream = myList.stream().sorted();
